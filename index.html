@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaf Disease Detection</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🌿 Leaf Disease Detection</h1>
+        <p>
+          Upload a leaf image to detect if the plant is healthy or has any
+          disease.
+        </p>
+      </header>
+
+      <div class="upload-section">
+        <input
+          type="file"
+          id="leafImageInput"
+          accept="image/*"
+          class="file-input"
+        />
+        <button onclick="uploadAndDetect()" class="upload-button">
+          Upload and Detect
+        </button>
+      </div>
+
+      <div id="result" class="result-section"></div>
+
+      <div class="chatbot-section">
+        <h2>🌟 Chatbot Assistant</h2>
+        <div id="chatContainer">
+          <div id="chatMessages"></div>
+          <div id="chatInputSection">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Ask me about plant care!"
+              onkeypress="handleChatInput(event)"
+            />
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
