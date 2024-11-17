@@ -5,8 +5,8 @@
 #include <HTTPClient.h>         // Library for HTTP POST
 
 // WiFi credentials
-const char* ssid = "OnePlus7T";
-const char* password = "Sabitri123";
+const char* ssid = "WifiSsid";
+const char* password = "Password";
 
 // Backend server URL
 const char* serverURL = "http://192.168.69.2/api/sensor";  // Replace with your Node.js server URL
